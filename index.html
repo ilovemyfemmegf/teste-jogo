@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Cantinho do neném!</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&display=swap">
+<title>Cantinho da Agnezinha</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Pacifico&display=swap">
 <style>
-:root{--bg:#ffe4f1;--panel:#ffffff;--ink:#5a2a63;--accent:#ff4fa3;--tab:#ffc2e0;--line:#7a3b8a;
+:root{--bg:#ffd6e8;--panel:#fff6fa;--ink:#7a1f4e;--accent:#ff3d8b;--tab:#ff9ccb;--line:#b02a6b;--dot:#ffbddb;--t1:#ffe3f0;--t2:#ffe9d9;--t3:#f3e3ff;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#3a1d4a;--panel:#4d2a63;--ink:#ffe8f5;--accent:#ff7ac0;--tab:#c76bb3;--line:#ffe8f5;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#3a1d4a;--panel:#4d2a63;--ink:#ffe8f5;--accent:#ff7ac0;--tab:#c76bb3;--line:#ffe8f5;color-scheme:dark}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#4a1634;--panel:#632046;--ink:#ffe3f0;--accent:#ff7ab8;--tab:#d4579a;--line:#ffd0e6;--dot:#5e2142;--t1:#6f2650;--t2:#6b2a3f;--t3:#5a2a6b;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#4a1634;--panel:#632046;--ink:#ffe3f0;--accent:#ff7ab8;--tab:#d4579a;--line:#ffd0e6;--dot:#5e2142;--t1:#6f2650;--t2:#6b2a3f;--t3:#5a2a6b;color-scheme:dark}
 *{box-sizing:border-box}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:"Fredoka","Comic Sans MS","Trebuchet MS",sans-serif;font-weight:500}
@@ -20,7 +20,7 @@ h1{font-size:clamp(22px,5vw,36px);margin:4px 0 10px;font-weight:700;flex:1;text-
 button{font:inherit;color:var(--ink);cursor:pointer;border:3px solid var(--line);background:var(--panel);border-radius:18px;padding:8px 14px;font-size:18px;min-height:48px}
 button:focus-visible{outline:4px solid var(--accent);outline-offset:2px}
 button:active{transform:scale(.95)}
-button.on{background:var(--tab);color:#4a1f55;box-shadow:0 4px 0 var(--line)}
+button.on{background:var(--tab);color:#5c1038;box-shadow:0 4px 0 var(--line)}
 .back{margin-bottom:10px}
 .bar{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px}
 .sep{width:6px}
@@ -30,7 +30,7 @@ button.on{background:var(--tab);color:#4a1f55;box-shadow:0 4px 0 var(--line)}
 .paper{background:#fff;border:4px solid var(--line);border-radius:22px;overflow:hidden;line-height:0}
 canvas{width:100%;height:auto;display:block;touch-action:none;cursor:crosshair}
 svg.page{width:100%;height:auto;display:block;background:#fff;max-height:70vh}
-svg.page .f{fill:#fff;stroke:#5a2a63;stroke-width:5;stroke-linejoin:round;cursor:pointer}
+svg.page .f{fill:#fff;stroke:#7a1f4e;stroke-width:5;stroke-linejoin:round;cursor:pointer}
 #tops{pointer-events:none}
 .pal{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:12px}
 .sw{width:52px;height:52px;border-radius:50%;padding:0;border:4px solid var(--line)}
@@ -52,63 +52,82 @@ svg.page .f{fill:#fff;stroke:#5a2a63;stroke-width:5;stroke-linejoin:round;cursor
 #st{touch-action:none;user-select:none;-webkit-user-select:none}
 #tray{margin-top:6px}
 button:disabled{cursor:default}
+body{background-image:radial-gradient(var(--dot) 2.5px,transparent 3px);background-size:28px 28px}
+h1{font-size:clamp(20px,5.2vw,34px);margin:6px 0 12px}
+h1 span{display:inline-block;position:relative;padding:8px 26px 10px;background:var(--panel);border:3px solid var(--line);border-radius:999px;box-shadow:0 5px 0 var(--line);font-family:"Pacifico","Brush Script MT",cursive;font-weight:400;line-height:1.3}
+h1 span::after{content:"";position:absolute;inset:4px;border:2px dashed var(--line);border-radius:999px;opacity:.45;pointer-events:none}
+.hub .card{position:relative;background:var(--t1)}
+.hub .card::after{content:"";position:absolute;inset:7px;border:2.5px dashed var(--line);border-radius:20px;opacity:.45;pointer-events:none}
+.hub .card:nth-child(3n+1){transform:rotate(-1.6deg)}
+.hub .card:nth-child(3n+2){background:var(--t2);transform:rotate(1.4deg)}
+.hub .card:nth-child(3n+3){background:var(--t3);transform:rotate(-1deg)}
+.hub .card:active{transform:scale(.96)}
+.foot{text-align:center;margin:22px 0 8px;font-size:16px;opacity:.8}
+.hub .card span{display:flex;height:64px;align-items:center;justify-content:center}
+.hub .card svg{color:var(--ink)}
+.mc{font-family:"Pacifico","Brush Script MT",cursive;color:var(--ink)}
+.mc svg{display:block;width:100%;height:100%;padding:12%}
+.mc.done{background:#fff3b8}
+.foot{font-family:"Pacifico","Brush Script MT",cursive;font-size:20px;opacity:1}
+#stars{display:flex;align-items:center;gap:4px;justify-content:flex-end}
+#stamps{display:inline-flex;align-items:center;gap:6px}
 </style>
 </head>
 <body>
 <main>
   <header>
-    <button id="home" data-go="home" aria-label="Início">🏠</button>
-    <h1>Cantinho da Agnezinha</h1>
-    <div id="stars">⭐ 0</div>
+    <button id="home" data-go="home" aria-label="Início">Início</button>
+    <h1><span>Cantinho da Agnezinha</span></h1>
+    <div id="stars"></div>
   </header>
 
   <section data-s="home">
-    <p class="hint">O que vamos fazer hoje?</p>
+    <p class="hint">O que vamos fazer hoje, Agnezinha?</p>
     <div class="hub">
-      <button class="card" data-go="draw"><span>✏️</span>Desenhar</button>
-      <button class="card" data-go="color"><span>🖍️</span>Colorir</button>
-      <button class="card" data-go="dress"><span>👗</span>Vestir a princesa</button>
-      <button class="card" data-go="cake"><span>🧁</span>Cupcake</button>
-      <button class="card" data-go="gar"><span>🌷</span>Jardim</button>
-      <button class="card" data-go="mem"><span>🃏</span>Memória</button>
-      <button class="card" data-go="bub"><span>🫧</span>Bolhas</button>
+      <button class="card" data-go="draw"><span data-ic="draw"></span>Desenhar</button>
+      <button class="card" data-go="color"><span data-ic="color"></span>Colorir</button>
+      <button class="card" data-go="dress"><span data-ic="dress"></span>Vestir a princesa</button>
+      <button class="card" data-go="cake"><span data-ic="cake"></span>Cupcake</button>
+      <button class="card" data-go="gar"><span data-ic="gar"></span>Jardim</button>
+      <button class="card" data-go="mem"><span data-ic="mem"></span>Memória</button>
+      <button class="card" data-go="bub"><span data-ic="bub"></span>Bolhas</button>
     </div>
   </section>
 
   <section data-s="draw" class="hide">
     <div class="bar" id="tools">
-      <button data-t="pen" class="on">✏️ Lápis</button>
-      <button data-t="brush">🖌️ Pincel</button>
-      <button data-t="rainbow">🌈 Arco-íris</button>
+      <button data-t="pen" class="on">Lápis</button>
+      <button data-t="brush">Pincel</button>
+      <button data-t="rainbow">Arco-íris</button>
       <button data-t="stamp">Carimbo</button>
-      <button data-t="eraser">🧽 Borracha</button>
+      <button data-t="eraser">Borracha</button>
     </div>
     <div class="bar" id="sizes">
-      <button data-s="6">• Fino</button>
-      <button data-s="14" class="on">● Médio</button>
-      <button data-s="30">⬤ Grosso</button>
+      <button data-s="6">Fino</button>
+      <button data-s="14" class="on">Médio</button>
+      <button data-s="30">Grosso</button>
       <span class="sep"></span>
-      <button id="stamps">🦄</button>
-      <button id="undo">↩️ Desfazer</button>
-      <button id="clear">🗑️ Limpar</button>
+      <button id="stamps" aria-label="Trocar carimbo"></button>
+      <button id="undo">Desfazer</button>
+      <button id="clear">Limpar</button>
     </div>
     <div class="paper"><canvas id="cv" width="900" height="600" aria-label="Área de desenho"></canvas></div>
   </section>
 
   <section data-s="color" class="hide">
     <div class="bar" id="pages">
-      <button data-p="0" class="on">🏰 Castelo</button>
-      <button data-p="4">🦄 Unicórnio</button>
-      <button data-p="5">👗 Vestido</button>
-      <button data-p="6">🧁 Cupcake</button>
-      <button data-p="7">🍦 Sorvete</button>
-      <button data-p="8">🐱 Gatinho</button>
-      <button data-p="9">🌈 Arco-íris</button>
-      <button data-p="10">🐞 Joaninha</button>
-      <button data-p="2">🌼 Flor</button>
-      <button data-p="3">🦋 Borboleta</button>
-      <button data-p="1">🐟 Peixe</button>
-      <button id="reset">🗑️ Limpar</button>
+      <button data-p="0" class="on">Castelo</button>
+      <button data-p="4">Unicórnio</button>
+      <button data-p="5">Vestido</button>
+      <button data-p="6">Cupcake</button>
+      <button data-p="7">Sorvete</button>
+      <button data-p="8">Gatinho</button>
+      <button data-p="9">Arco-íris</button>
+      <button data-p="10">Joaninha</button>
+      <button data-p="2">Flor</button>
+      <button data-p="3">Borboleta</button>
+      <button data-p="1">Peixe</button>
+      <button id="reset">Limpar</button>
     </div>
     <div class="paper" id="svgBox"></div>
     <p class="hint">Escolha uma cor e toque no desenho para pintar.</p>
@@ -118,11 +137,11 @@ button:disabled{cursor:default}
     <div class="bar" id="eopts"></div>
     <div class="paper"><svg id="st" class="page" viewBox="0 0 400 400" aria-label="Cenário"></svg></div>
     <div class="bar" id="ctl" style="margin-top:10px">
-      <button data-a="min">➖ Menor</button>
-      <button data-a="plus">➕ Maior</button>
-      <button data-a="rot">↻ Girar</button>
-      <button data-a="flip">↔ Espelhar</button>
-      <button data-a="del">🗑️ Tirar</button>
+      <button data-a="min">Menor</button>
+      <button data-a="plus">Maior</button>
+      <button data-a="rot">Girar</button>
+      <button data-a="flip">Espelhar</button>
+      <button data-a="del">Tirar</button>
       <button id="eclr">Limpar tudo</button>
     </div>
     <p class="hint">Toque num enfeite para colocar. Arraste para onde quiser: as roupas encaixam sozinhas perto do corpinho!</p>
@@ -130,7 +149,7 @@ button:disabled{cursor:default}
   </section>
 
   <section data-s="mem" class="hide">
-    <div class="bar"><button id="memNew">🔄 Novo jogo</button></div>
+    <div class="bar"><button id="memNew">Novo jogo</button></div>
     <p class="hint" id="mmsg"></p>
     <div class="mem" id="mem"></div>
   </section>
@@ -141,6 +160,7 @@ button:disabled{cursor:default}
   </section>
 
   <div class="pal hide" id="pal" aria-label="Cores"></div>
+<footer class="foot">do papai, para a agnes! <svg viewBox="0 0 100 100" width="20" height="20" aria-hidden="true" style="vertical-align:-3px"><path d="M50 90C8 60 4 32 22 18c12-9 24-4 28 8 4-12 16-17 28-8 18 14 14 42-28 72z" fill="#ff3d8b"/></svg></footer>
 </main>
 
 <script>
@@ -148,10 +168,11 @@ button:disabled{cursor:default}
   var $=function(s){return document.querySelector(s)};
   var COLORS=["#ff4fa3","#ff9ecb","#b57bff","#6ec6ff","#5de0b0","#ffd84d","#ff8a5c","#ff4757","#8b5a2b","#ffffff"];
   var color=COLORS[0], tool="pen", size=14, hue=0, cur="home", stars=0;
-  var STAMPS=["🦄","⭐","❤️","🌈","🦋","🌸","👑","🧁","🐱"], si=0;
+  var STIMG=[], si=0;
   var PALS={draw:1,color:1};
 
-  function addStars(n){stars+=n;$("#stars").textContent="⭐ "+stars}
+  var STARSV='<svg viewBox="0 0 100 100" width="22" height="22" aria-hidden="true"><path d="M50 6l13 30 32 3-24 22 8 32-29-17-29 17 8-32L5 39l32-3z" fill="#ffd84d" stroke="#e0a800" stroke-width="6" stroke-linejoin="round"/></svg>';
+  function addStars(n){stars+=n;$("#stars").innerHTML=STARSV+" "+stars}
   var ac;
   function beep(f){try{ac=ac||new (window.AudioContext||window.webkitAudioContext)();var o=ac.createOscillator(),g=ac.createGain();o.type="sine";o.frequency.value=f;g.gain.value=.08;o.connect(g);g.connect(ac.destination);o.start();g.gain.exponentialRampToValueAtTime(.001,ac.currentTime+.18);o.stop(ac.currentTime+.2)}catch(e){}}
 
@@ -201,7 +222,7 @@ button:disabled{cursor:default}
   cv.addEventListener("pointerdown",function(e){
     e.preventDefault(); cv.setPointerCapture(e.pointerId); snap();
     var p=pos(e);
-    if(tool==="stamp"){ctx.font=(size*4+30)+"px serif";ctx.textAlign="center";ctx.textBaseline="middle";ctx.fillText(STAMPS[si],p.x,p.y);return}
+    if(tool==="stamp"){var z=size*4+60;ctx.drawImage(STIMG[si],p.x-z/2,p.y-z/2,z,z);return}
     drawing=true; last=p; seg(p,{x:p.x+.01,y:p.y+.01});
   });
   cv.addEventListener("pointermove",function(e){if(!drawing)return;var p=pos(e);seg(last,p);last=p});
@@ -209,7 +230,7 @@ button:disabled{cursor:default}
   group("tools","t",function(v){tool=v});
   group("sizes","s",function(v){size=+v});
   $("#stamps").onclick=function(){
-    si=(si+1)%STAMPS.length; this.textContent=STAMPS[si]; tool="stamp";
+    si=(si+1)%STIMG.length; stBtn(); tool="stamp";
     [].forEach.call(document.querySelectorAll("#tools button"),function(x){x.classList.toggle("on",x.dataset.t==="stamp")});
   };
   $("#undo").onclick=function(){var s=undoStack.pop(); if(s)ctx.putImageData(s,0,0)};
@@ -227,7 +248,7 @@ button:disabled{cursor:default}
   '<polygon class="f" points="150,150 250,150 200,288"/><circle class="f" cx="200" cy="128" r="52"/><circle class="f" cx="200" cy="72" r="42"/><circle class="f" cx="200" cy="26" r="14"/>',
   '<polygon class="f" points="130,100 140,35 187,75"/><polygon class="f" points="270,100 260,35 213,75"/><ellipse class="f" cx="200" cy="250" rx="62" ry="42"/><circle class="f" cx="200" cy="150" r="80"/><circle class="f" cx="170" cy="140" r="12"/><circle class="f" cx="230" cy="140" r="12"/><polygon class="f" points="188,168 212,168 200,184"/>',
   '<path class="f" d="M40 250A160 160 0 0 1 360 250H330A130 130 0 0 0 70 250z"/><path class="f" d="M70 250A130 130 0 0 1 330 250H300A100 100 0 0 0 100 250z"/><path class="f" d="M100 250A100 100 0 0 1 300 250H270A70 70 0 0 0 130 250z"/><path class="f" d="M130 250A70 70 0 0 1 270 250H240A40 40 0 0 0 160 250z"/><circle class="f" cx="50" cy="258" r="26"/><circle class="f" cx="85" cy="265" r="22"/><circle class="f" cx="350" cy="258" r="26"/><circle class="f" cx="315" cy="265" r="22"/>',
-  '<circle class="f" cx="200" cy="175" r="90"/><circle class="f" cx="200" cy="72" r="40"/><circle class="f" cx="160" cy="150" r="18"/><circle class="f" cx="240" cy="150" r="18"/><circle class="f" cx="160" cy="210" r="16"/><circle class="f" cx="240" cy="210" r="16"/><circle class="f" cx="200" cy="235" r="14"/><path d="M200 112V265" stroke="#5a2a63" stroke-width="5" pointer-events="none"/><path d="M185 40Q170 12 158 16M215 40Q230 12 242 16" fill="none" stroke="#5a2a63" stroke-width="5" pointer-events="none"/>'
+  '<circle class="f" cx="200" cy="175" r="90"/><circle class="f" cx="200" cy="72" r="40"/><circle class="f" cx="160" cy="150" r="18"/><circle class="f" cx="240" cy="150" r="18"/><circle class="f" cx="160" cy="210" r="16"/><circle class="f" cx="240" cy="210" r="16"/><circle class="f" cx="200" cy="235" r="14"/><path d="M200 112V265" stroke="#7a1f4e" stroke-width="5" pointer-events="none"/><path d="M185 40Q170 12 158 16M215 40Q230 12 242 16" fill="none" stroke="#7a1f4e" stroke-width="5" pointer-events="none"/>'
   ];
   var box=$("#svgBox"), cp=0;
   function showPage(i){box.innerHTML='<svg class="page" viewBox="0 0 400 300" role="img" aria-label="Desenho para colorir">'+PAGES[i]+'</svg>'}
@@ -248,7 +269,7 @@ button:disabled{cursor:default}
 
   var SC={
     dress:{
-      opts:[{k:"hair",n:"💇‍♀️ Cabelo",c:6},{k:"skin",n:"🧒 Pele",c:5},{k:"bg",n:"🖼️ Fundo",c:4}],
+      opts:[{k:"hair",n:"Cabelo",c:6},{k:"skin",n:"Pele",c:5},{k:"bg",n:"Fundo",c:4}],
       base:function(o){var h=v(HAIR,o.hair),s=v(SKIN,o.skin);return[
         '<rect width="400" height="400" fill="'+v(BGP,o.bg)+'"/>',
         '<g fill="'+h+'"><ellipse cx="200" cy="120" rx="64" ry="72"/><rect x="136" y="120" width="128" height="110" rx="30"/></g>'+
@@ -277,7 +298,7 @@ button:disabled{cursor:default}
       }
     },
     cake:{
-      opts:[{k:"fr",n:"🍥 Cobertura",c:5},{k:"cup",n:"🧁 Forminha",c:4}],
+      opts:[{k:"fr",n:"Cobertura",c:5},{k:"cup",n:"Forminha",c:4}],
       base:function(o){var f=v(FROST,o.fr),c=v(CUP,o.cup),k='stroke="rgba(0,0,0,.12)" stroke-width="3"';return[
         '<rect width="400" height="400" fill="#fff0f7"/><ellipse cx="200" cy="352" rx="140" ry="24" fill="#fff" stroke="#e8b7d4" stroke-width="4"/>',
         '<polygon points="120,232 280,232 256,346 144,346" fill="'+c+'" '+k+'/><path d="M152 232l8 114M186 232l4 114M214 232l-4 114M248 232l-8 114" stroke="#fff" stroke-width="6" opacity=".5"/>'+
@@ -295,18 +316,18 @@ button:disabled{cursor:default}
       }
     },
     gar:{
-      opts:[{k:"sky",n:"🌤️ Céu",c:3}],
+      opts:[{k:"sky",n:"Céu",c:3}],
       base:function(o){var k=v(SKY,o.sky),n=(o.sky|0)%3===2?'<g fill="#fff"><circle cx="60" cy="50" r="3"/><circle cx="150" cy="90" r="2.5"/><circle cx="260" cy="40" r="3"/><circle cx="340" cy="110" r="2.5"/><circle cx="210" cy="140" r="2"/></g>':'';return[
         '<defs><linearGradient id="sk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="'+k[0]+'"/><stop offset="1" stop-color="'+k[1]+'"/></linearGradient></defs><rect width="400" height="400" fill="url(#sk)"/>'+n+'<ellipse cx="100" cy="410" rx="270" ry="130" fill="#7fd47a"/><ellipse cx="330" cy="420" rx="260" ry="115" fill="#9be58f"/>',""]},
       defs:{
         tu:{n:"Tulipa",d:[200,310,1.2,300],svg:STEM+'<path d="M30 22q0 34 20 36 20-2 20-36l-10 10-10-14-10 14z" fill="#ff4f7b"/>'},
         dz:{n:"Margarida",d:[200,310,1.2,300],svg:STEM+'<g stroke="#e3d0ff" stroke-width="2">'+P(8,50,36,16,7,14,"#fff")+'</g><circle cx="50" cy="36" r="9" fill="#ffd84d"/>'},
         sf:{n:"Girassol",d:[200,300,1.4,300],svg:STEM+P(12,50,34,18,6,14,"#ffc400")+'<circle cx="50" cy="34" r="14" fill="#7a4b2e"/>'},
-        bf:{n:"Borboleta",d:[200,190,.8,300],svg:'<ellipse cx="30" cy="36" rx="24" ry="22" fill="#ff9ecb"/><ellipse cx="70" cy="36" rx="24" ry="22" fill="#ff9ecb"/><ellipse cx="34" cy="68" rx="17" ry="16" fill="#c9a4ff"/><ellipse cx="66" cy="68" rx="17" ry="16" fill="#c9a4ff"/><rect x="46" y="26" width="8" height="52" rx="4" fill="#5a2a63"/><path d="M48 28Q40 10 34 12M52 28Q60 10 66 12" stroke="#5a2a63" stroke-width="3" fill="none"/><circle cx="30" cy="36" r="6" fill="#fff"/><circle cx="70" cy="36" r="6" fill="#fff"/>'},
+        bf:{n:"Borboleta",d:[200,190,.8,300],svg:'<ellipse cx="30" cy="36" rx="24" ry="22" fill="#ff9ecb"/><ellipse cx="70" cy="36" rx="24" ry="22" fill="#ff9ecb"/><ellipse cx="34" cy="68" rx="17" ry="16" fill="#c9a4ff"/><ellipse cx="66" cy="68" rx="17" ry="16" fill="#c9a4ff"/><rect x="46" y="26" width="8" height="52" rx="4" fill="#7a1f4e"/><path d="M48 28Q40 10 34 12M52 28Q60 10 66 12" stroke="#7a1f4e" stroke-width="3" fill="none"/><circle cx="30" cy="36" r="6" fill="#fff"/><circle cx="70" cy="36" r="6" fill="#fff"/>'},
         mu:{n:"Cogumelo",d:[200,320,.9,300],svg:'<path d="M8 56C8 22 92 22 92 56z" fill="#ff4f4f"/><rect x="36" y="54" width="28" height="38" rx="10" fill="#fff4e0"/><circle cx="30" cy="42" r="6" fill="#fff"/><circle cx="56" cy="34" r="7" fill="#fff"/><circle cx="76" cy="46" r="5" fill="#fff"/>'},
         rb:{n:"Arco-íris",d:[200,150,3,0],svg:'<g fill="none" stroke-width="9"><path d="M6 90A44 44 0 0 1 94 90" stroke="#ff4f4f"/><path d="M15 90A35 35 0 0 1 85 90" stroke="#ffb02e"/><path d="M24 90A26 26 0 0 1 76 90" stroke="#5de0b0"/><path d="M33 90A17 17 0 0 1 67 90" stroke="#6ec6ff"/></g>'},
         cl:{n:"Nuvem",d:[130,70,1.4,160],svg:'<g fill="#cfe6f7"><circle cx="32" cy="58" r="23"/><circle cx="56" cy="44" r="29"/><circle cx="76" cy="62" r="21"/></g><g fill="#fff"><circle cx="32" cy="58" r="20"/><circle cx="56" cy="44" r="26"/><circle cx="76" cy="62" r="18"/></g>'},
-        sn:{n:"Sol",d:[335,60,1.2,0],svg:'<g stroke="#ffb02e" stroke-width="6" stroke-linecap="round"><path d="M50 4v14M50 82v14M4 50h14M82 50h14M17 17l10 10M73 73l10 10M83 17L73 27M27 73L17 83"/></g><circle cx="50" cy="50" r="24" fill="#ffd84d"/><circle cx="42" cy="46" r="3" fill="#5a2a63"/><circle cx="58" cy="46" r="3" fill="#5a2a63"/><path d="M42 58q8 7 16 0" stroke="#5a2a63" stroke-width="3" fill="none"/>'},
+        sn:{n:"Sol",d:[335,60,1.2,0],svg:'<g stroke="#ffb02e" stroke-width="6" stroke-linecap="round"><path d="M50 4v14M50 82v14M4 50h14M82 50h14M17 17l10 10M73 73l10 10M83 17L73 27M27 73L17 83"/></g><circle cx="50" cy="50" r="24" fill="#ffd84d"/><circle cx="42" cy="46" r="3" fill="#7a1f4e"/><circle cx="58" cy="46" r="3" fill="#7a1f4e"/><path d="M42 58q8 7 16 0" stroke="#7a1f4e" stroke-width="3" fill="none"/>'},
         tr:{n:"Árvore",d:[200,250,1.8,300],svg:'<rect x="42" y="56" width="16" height="40" fill="#8b5a2b"/><circle cx="50" cy="36" r="30" fill="#4cc27a"/><circle cx="34" cy="48" r="20" fill="#3fae52"/><circle cx="66" cy="46" r="20" fill="#3fae52"/><circle cx="46" cy="28" r="6" fill="#ff4f4f"/><circle cx="62" cy="40" r="6" fill="#ff4f4f"/>'}
       }
     }
@@ -372,22 +393,23 @@ button:disabled{cursor:default}
   $("#eclr").onclick=function(){S().items=[];sel=-1;render()};
 
   // Memória
-  var ME=["🦄","🌸","🍓","🐱","🌈","🦋","🍭","👑"], first=null, lock=false, pairs=0;
+  var MK=[["cake","hn"],["cake","sb"],["cake","ch"],["gar","rb"],["gar","bf"],["gar","mu"],["dress","cr"],["gar","tu"]], first=null, lock=false, pairs=0;
+  function mart(k){return '<svg viewBox="0 0 100 100" stroke="#7a1f4e" stroke-width="2.5" stroke-linejoin="round">'+SC[MK[k][0]].defs[MK[k][1]].svg+'</svg>'}
   function newMem(){
-    var a=ME.concat(ME).sort(function(){return Math.random()-.5}), g=$("#mem");
+    var a=[0,1,2,3,4,5,6,7,0,1,2,3,4,5,6,7].sort(function(){return Math.random()-.5}), g=$("#mem");
     g.innerHTML="";first=null;lock=false;pairs=0;$("#mmsg").textContent="Ache os pares iguais!";
-    a.forEach(function(e){
-      var b=document.createElement("button");b.className="mc";b.textContent="❓";
+    a.forEach(function(k){
+      var b=document.createElement("button");b.className="mc";b.textContent="?";b.dataset.k=k;
       b.onclick=function(){
         if(lock||b===first||b.classList.contains("done"))return;
-        b.textContent=e;b.classList.add("open");beep(500);
+        b.innerHTML=mart(k);b.classList.add("open");beep(500);
         if(!first){first=b;return}
-        if(first.textContent===e){
+        if(first.dataset.k===b.dataset.k){
           first.classList.add("done");b.classList.add("done");first=null;beep(800);
-          if(++pairs===8){$("#mmsg").textContent="Parabéns! 🎉 Você achou todos!";addStars(3)}
+          if(++pairs===8){$("#mmsg").textContent="Parabéns! Você achou todos!";addStars(3)}
         }else{
           lock=true;var f=first;first=null;
-          setTimeout(function(){f.textContent=b.textContent="❓";f.classList.remove("open");b.classList.remove("open");lock=false},700);
+          setTimeout(function(){f.textContent=b.textContent="?";f.classList.remove("open");b.classList.remove("open");lock=false},700);
         }
       };
       g.appendChild(b);
@@ -411,6 +433,22 @@ button:disabled{cursor:default}
     bb.appendChild(d);
   }
   setInterval(spawn,650);
+
+  // Ilustrações do menu e carimbos
+  var IC={
+    draw:'<g transform="rotate(35 50 50)"><rect x="38" y="4" width="24" height="64" rx="4" fill="#ffd84d"/><rect x="38" y="4" width="24" height="14" rx="4" fill="#ff9ccb"/><path d="M38 68h24L50 94z" fill="#ffe3c8"/><path d="M45 82h10l-5 12z" fill="#7a1f4e"/></g><path d="M6 92q14-16 28 0t28 0" fill="none" stroke="#ff3d8b" stroke-width="5"/>',
+    color:'<g transform="rotate(-35 50 50)"><rect x="36" y="14" width="28" height="72" rx="4" fill="#ff6fae"/><rect x="36" y="36" width="28" height="22" fill="#fff"/><path d="M36 14q14-14 28 0z" fill="#ff6fae"/></g><path d="M8 92q10-10 20 0t20 0t20 0" fill="none" stroke="#ff6fae" stroke-width="5"/>',
+    dress:'<g transform="translate(12 26) scale(.7)">'+SC.dress.defs.d1.svg+'</g><g transform="translate(30 -2) scale(.4)">'+SC.dress.defs.cr.svg+'</g>',
+    cake:'<polygon points="28,56 72,56 64,94 36,94" fill="#8fd3ff"/><ellipse cx="50" cy="54" rx="28" ry="10" fill="#ff9ecb"/><circle cx="50" cy="38" r="17" fill="#ff9ecb"/><circle cx="50" cy="17" r="7" fill="#e0203a"/>',
+    gar:SC.gar.defs.tu.svg,
+    mem:'<rect x="12" y="22" width="42" height="58" rx="6" fill="#ffd0e6" transform="rotate(-12 33 51)"/><g fill="#fff" stroke="none"><circle cx="26" cy="40" r="3"/><circle cx="36" cy="54" r="3"/><circle cx="28" cy="66" r="3"/></g><rect x="44" y="20" width="42" height="58" rx="6" fill="#fff" transform="rotate(10 65 49)"/><g transform="translate(52 34) scale(.3)">'+HEART+'</g>',
+    bub:'<circle cx="36" cy="60" r="26" fill="#c9e8ff" fill-opacity=".75"/><circle cx="70" cy="32" r="18" fill="#ffd0e6" fill-opacity=".85"/><circle cx="74" cy="78" r="11" fill="#e9d5ff" fill-opacity=".9"/><path d="M22 52a15 15 0 0 1 11-11" fill="none" stroke="#fff" stroke-width="4"/>'
+  };
+  [].forEach.call(document.querySelectorAll("[data-ic]"),function(el){el.innerHTML='<svg viewBox="0 0 100 100" width="64" height="64" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">'+IC[el.dataset.ic]+'</svg>'});
+  var STS=[HEART,SPARK,SC.dress.defs.cr.svg,SC.gar.defs.bf.svg,SC.gar.defs.rb.svg,SC.gar.defs.sn.svg,SC.cake.defs.fl.svg,IC.cake,SC.cake.defs.hn.svg];
+  STS.forEach(function(a){var m=new Image();m.src="data:image/svg+xml;charset=utf-8,"+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" stroke="#7a1f4e" stroke-width="2.5" stroke-linejoin="round">'+a+'</svg>');STIMG.push(m)});
+  function stBtn(){$("#stamps").innerHTML='<svg viewBox="0 0 100 100" width="30" height="30" stroke="currentColor" stroke-width="3" stroke-linejoin="round" aria-hidden="true">'+STS[si]+'</svg> Trocar'}
+  stBtn(); addStars(0);
 
   go("home");
 })();
